@@ -1,0 +1,15 @@
+[package]
+name = "ab-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "有声书工坊核心领域逻辑：工程库、词典版本、审听批注、离线包与差异报告"
+
+[dependencies]
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { version = "1", features = ["v4"] }
+sha2 = "0.10"
+thiserror = "1"
+zip = { version = "2", default-features = false, features = ["deflate"] }

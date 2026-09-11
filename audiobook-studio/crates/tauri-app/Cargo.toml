@@ -1,0 +1,19 @@
+[package]
+name = "ab-tauri"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "有声书工坊桌面端（Tauri 壳）"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+ab-core = { path = "../core" }
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# 独立 workspace：本壳依赖系统 WebKitGTK，不进入默认 cargo test 的工作区。
+[workspace]

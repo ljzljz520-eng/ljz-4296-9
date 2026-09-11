@@ -1,0 +1,9 @@
+/target
+crates/*/target
+ui/node_modules
+ui/dist
+*.db
+*.db-wal
+*.db-shm
+*.abpkg
+media/
